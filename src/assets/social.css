@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.socialMediaContainerDiv {
+  background-color: #a3b7f5;
+}
+div.exploreMore {
+  background-color: #000000;
+  transform: translate(0, -113px);
+  width: 408px;
+  position: relative;
+}
+
+div.exploreMore a {
+  position: absolute;
+  top: 40% !important;
+  left: 30% !important;
+}
