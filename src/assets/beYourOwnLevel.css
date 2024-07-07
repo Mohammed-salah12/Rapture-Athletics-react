@@ -19,6 +19,8 @@ h1.headingLevel {
 
 p.description {
   width: 550px;
+  overflow: auto;
+  height: 300px;
 }
 button.shopBtn {
   width: 200px;
