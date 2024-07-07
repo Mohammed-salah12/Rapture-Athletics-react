@@ -15,7 +15,7 @@ export const SocialMedia = () => {
       element,
       { x: "-100%" },
       {
-        x: 100,
+        x: -30,
         duration: 1,
         ease: "power2.out",
         scrollTrigger: {
@@ -31,7 +31,7 @@ export const SocialMedia = () => {
 
   return (
     <div
-      className="socialMediaContainerDiv w-full h-72 flex text-3xl"
+      className="socialMediaContainerDiv w-full h-72 flex text-3xl mt-20"
       ref={socialMediaRef}
     >
       <div className="imgBox w-72">

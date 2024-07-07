@@ -1,11 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Syne", sans-serif;
 }
 
 div.socialMediaContainerDiv {
-  background-color: #a3b7f5;
+  background-image: url(../imgs/shoeBackground.png);
 }
 div.exploreMore {
   background-color: #000000;

@@ -1,22 +1,35 @@
-import { useGSAP } from "@gsap/react";
+import { useEffect, useState, useRef } from "react";
+import axios from "axios";
+import gsap from "gsap";
 import "../assets/Hero.css";
 import HeroImg from "../imgs/heroImg.png";
-import gsap from "gsap";
-import { useRef } from "react";
 
 const Hero = () => {
-  useGSAP(() => {
+  const [heroData, setHeroData] = useState({ title: "", description: "" });
+  const headRef = useRef(null);
+
+  useEffect(() => {
+    // Fetch data from the Laravel API
+    axios
+      .get("http://127.0.0.1:8001/api/heroes")
+      .then((response) => {
+        setHeroData(response.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the hero data!", error);
+      });
+  }, []);
+
+  useEffect(() => {
     gsap.to(".heroContainerDiv", {
       opacity: 1,
       duration: 1,
       delay: 0.1,
       ease: "power3.out",
     });
-  });
+  }, []);
 
-  const headRef = useRef(null);
-
-  useGSAP(() => {
+  useEffect(() => {
     const head = headRef.current;
 
     // Initial position and scale
@@ -36,14 +49,8 @@ const Hero = () => {
   return (
     <div className="heroContainerDiv opacity-0">
       <div className="heroText  flex gap-6 flex-col ">
-        <h1 className="text-6xl heroTextB">
-          Step Into Style with <br /> Our Trendy Shoes!
-        </h1>
-        <h3 className="year">2024</h3>
-        <p className="description">
-          Our collections include a wide range of shoes for <br /> men, women,
-          and children.
-        </p>
+        <h1 className="text-6xl heroTextB">{heroData.title}</h1>
+        <p className="description">{heroData.description}</p>
         <button className="shopBtn">Shop Now</button>
       </div>
       <div className="imgholeder flex justify-end translate-x-40">
@@ -59,4 +66,5 @@ const Hero = () => {
     </div>
   );
 };
+
 export default Hero;

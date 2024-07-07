@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Syne", sans-serif;
+}
+img.beYourOwnLevelImg {
+  width: 1500px;
+  height: 600px;
+}
+
+h1.headingLevel {
+  font-size: 70px;
+  font-weight: 800;
+  transform: translate(-140px, 30px);
+}
+
+p.description {
+  width: 550px;
+}
+button.shopBtn {
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #ca0200;
+  font-size: 20px;
+  cursor: pointer;
+  transform: translate(0, 100px);
+}
+
+div.holder {
+  line-height: 40px;
+}
+
+p.description {
+  transform: translate(0, 70px);
+}

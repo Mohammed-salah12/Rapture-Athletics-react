@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap");
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Syne", sans-serif;
 }
 body {
   position: relative;
@@ -24,7 +27,7 @@ div.imgholeder {
 }
 div.heroText {
   position: absolute;
-  top: 30%;
+  top: 10%;
   left: 6%;
   z-index: 1;
 }
@@ -59,4 +62,5 @@ h3.year {
 p.description {
   color: #000000;
   font-size: 18px;
+  transform: translate(0, 0);
 }
